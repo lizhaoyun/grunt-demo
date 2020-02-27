@@ -1,29 +1,30 @@
 
 // module.exports=function(grunt){
 //     grunt.initConfig({
-//         htmlhint:{
+//         csslint:{
 //             options:{
-//                 htmlhint:'./.htmlhintrc'
+//                 csslintrc:'./.csslintrc'
 //             },
-//             src:['*.html']
+//             src:['*.css']
 //         }
 //     });
 
-//     grunt.loadNpmTasks('grunt-htmlhint');
+//     grunt.loadNpmTasks('grunt-contrib-csslint');
 
-//     grunt.registerTask('default',['htmlhint']);
+//     grunt.registerTask('default',['csslint']);
 // }
+/*global module:true*/
 module.exports=function(grunt){
     grunt.initConfig({
-        csslint:{
+        eslint:{
             options:{
-                csslintrc:'./.csslintrc'
+                eslintrc:'./.eslintrc.json'
             },
-            src:['*.css']
+            target:['*.js']
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-csslint');
+    grunt.loadNpmTasks('grunt-eslint');
 
-    grunt.registerTask('default',['csslint']);
+    grunt.registerTask('default',['eslint']);
 }

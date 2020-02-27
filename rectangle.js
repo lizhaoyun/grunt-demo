@@ -1,3 +1,4 @@
+/*global $:true*/
 $(function(){
     /**
      * CSS选择器 重要
@@ -30,21 +31,25 @@ $(function(){
                 var w1 = Number($width.val().replace("."," "));
                 var h1 = Number($height.val().replace("."," "))*cm;
                 console.log(w1,h1);
-
+                var sum=(w1+h1)/m;
+                var p=2*sum,
+                    a=w*h;
+                $length.val(p);
+                $area.val(a);
             }
             else{
-                var w1 = Number($width.val().replace("."," "))*cm;
-                var h1 = Number($height.val().replace("."," "));
-                console.log(w1,h1);
-
+                var w2 = Number($width.val().replace("."," "))*cm;
+                var h2 = Number($height.val().replace("."," "));
+                console.log(w2,h2);
+                var sum1=(w2+h2)/m;
+                var p1=2*sum1,
+                    a=w*h;
+                $length.val(p1);
+                $area.val(a);
             }
-            var sum=(w1+h1)/m;
             // var p=2*(w+h).toFixed(2),
             //     a=w*h;
-            var p=2*sum,
-                a=w*h;
-            $length.val(p);
-            $area.val(a);
+            
             
         });
 })
