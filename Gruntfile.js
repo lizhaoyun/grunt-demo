@@ -1,27 +1,29 @@
+
 // module.exports=function(grunt){
 //     grunt.initConfig({
-//         less:{
-//             compile:{
-//                 files:{'dist/compiled.css':'css/*.less'}
-//             }
+//         htmlhint:{
+//             options:{
+//                 htmlhint:'./.htmlhintrc'
+//             },
+//             src:['*.html']
 //         }
 //     });
 
-//     grunt.loadNpmTasks('grunt-contrib-less');
+//     grunt.loadNpmTasks('grunt-htmlhint');
 
-//     grunt.registerTask('default',['less:compile']);
+//     grunt.registerTask('default',['htmlhint']);
 // }
 module.exports=function(grunt){
     grunt.initConfig({
-        htmlhint:{
+        csslint:{
             options:{
-                htmlhint:'./.htmlhintrc'
+                csslintrc:'./.csslintrc'
             },
-            src:['*.html']
+            src:['*.css']
         }
     });
 
-    grunt.loadNpmTasks('grunt-htmlhint');
+    grunt.loadNpmTasks('grunt-contrib-csslint');
 
-    grunt.registerTask('default',['htmlhint']);
+    grunt.registerTask('default',['csslint']);
 }
