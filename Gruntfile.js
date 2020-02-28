@@ -1,30 +1,29 @@
 
-// module.exports=function(grunt){
-//     grunt.initConfig({
-//         csslint:{
-//             options:{
-//                 csslintrc:'./.csslintrc'
-//             },
-//             src:['*.css']
-//         }
-//     });
-
-//     grunt.loadNpmTasks('grunt-contrib-csslint');
-
-//     grunt.registerTask('default',['csslint']);
-// }
 /*global module:true*/
 module.exports=function(grunt){
     grunt.initConfig({
-        eslint:{
-            options:{
-                eslintrc:'./.eslintrc.json'
+        mocha_istanbul: {
+            coverage: {
+                src: 'test', // a folder works nicely
+                options: {
+                    mask: '*.spec.js'
+                }
             },
-            target:['*.js']
+            coveralls: {
+                src: ['test', 'testSpecial', 'testUnique'], // multiple folders also works
+                options: {
+                    coverage:true, // this will make the grunt.event.on('coverage') event listener to be triggered
+                    check: {
+                        lines: 75,
+                        statements: 75
+                    },
+                    root: './lib', // define where the cover task should consider the root of libraries that are covered by tests
+                    reportFormats: ['cobertura','lcovonly']
+                }
+            }
         }
     });
-
-    grunt.loadNpmTasks('grunt-eslint');
-
-    grunt.registerTask('default',['eslint']);
+    grunt.loadNpmTasks('grunt-mocha-istanbul');
+    grunt.registerTask('coveralls', ['mocha_istanbul:coveralls']);
+    grunt.registerTask('coverage', ['mocha_istanbul:coverage']);
 }

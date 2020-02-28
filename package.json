@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,14 @@
   },
   "homepage": "https://github.com/lizhaoyun/grunt-demo#readme",
   "devDependencies": {
+    "chai": "^4.2.0",
     "grunt": "^1.0.4",
     "grunt-contrib-csslint": "^2.0.0",
     "grunt-contrib-less": "^2.0.0",
     "grunt-eslint": "^22.0.0",
-    "grunt-htmlhint": "^0.9.13"
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-mocha-istanbul": "^5.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^7.1.0"
   }
 }
