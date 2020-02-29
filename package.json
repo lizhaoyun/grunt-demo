@@ -19,8 +19,7 @@
   "homepage": "https://github.com/lizhaoyun/grunt-demo#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "grunt": "^1.0.4",
-    "grunt-mocha-cli": "^5.0.0",
-    "grunt-run": "^0.8.1"
+    "grunt": ">=0.4.5",
+    "grunt-mocha": "^0.4.12"
   }
 }
