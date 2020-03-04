@@ -1,18 +1,15 @@
 
 module.exports = function(grunt) {
     grunt.initConfig({
-        htmlmin:{
-            options:{
-                removeComments: true,
-                collapseWhitespace: true
-            },
-            files:{
-                src:'./rectangle.html',
-                dest:"./dist/index.html"
+        imagemin:{
+            fiels:{
+                expand:true,
+                src:['./images/*.{png,jpg,gif}'],
+                dest:"dist/"
             }
         }
     })
 
-    grunt.loadNpmTasks("grunt-contrib-htmlmin");
-    grunt.registerTask("default", ["htmlmin"])
+    grunt.loadNpmTasks("grunt-contrib-imagemin");
+    grunt.registerTask("default", ["imagemin"])
 }
