@@ -1,0 +1,24 @@
+{
+  "name": "grunt-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizhaoyun/grunt-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizhaoyun/grunt-demo/issues"
+  },
+  "homepage": "https://github.com/lizhaoyun/grunt-demo#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1"
+  }
+}
